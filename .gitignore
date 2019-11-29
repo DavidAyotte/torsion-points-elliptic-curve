@@ -1,0 +1,9 @@
+# GP/PARI history
+gp_history.txt
+
+# Computations
+script.gp
+calculs.gp
+
+# txt files
+*.txt
