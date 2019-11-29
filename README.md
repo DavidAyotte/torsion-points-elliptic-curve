@@ -1,4 +1,4 @@
-# torsion-point-elliptic-curve
+# torsion-points-elliptic-curve
 Script PARI/GP qui permet de calculer l'ensemble des points de torsions rationnel d'une courbe elliptique E/Q.
 
 * Pour representer la courbe elliptique E : y^2 = x^3 + ax + b, on écrit E = [a,b].
