@@ -12,3 +12,5 @@ Voici la liste des fonctions dans le fichier torsion.gp :
 * ellmultbyN(E, P, N) : retourne le point NP
 * order(E, P) : retourne l'ordre de P
 * elltorsion(E) : retourne une liste contenant tous les points de torsion rationnel de E avec leur ordre respectif.
+
+Pour obtenir de l'aide sur une fonction, après avoir importé le script torsion.gp, il suffit d'écrire ?<nom-de-la-fonction>.
