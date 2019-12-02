@@ -63,16 +63,13 @@ Retourne le point 2P."
 ellptadd(E, P, Q) = {
 	if(P == oo, return(Q));
 	if(Q == oo, return(P));
-	if(P == [Q[1], -Q[2]], return(oo));
-	a = E[1];
-	b = E[2];
 	xP = P[1]; 	yP = P[2];
 	xQ = Q[1]; 	yQ = Q[2];
 	if(xP == xQ & yP == yQ, return(elldbl(E, P)));
-	L = (yQ - yP)/(xQ-xP);
-	M = yP - L*xP;
-	xR = ((yQ - yP)/(xQ - xP))^2 - xP - xQ; 
-	yR = -L*xR - M;
+	if(P == [xQ, -yQ], return(oo));
+	L = (yQ - yP)/(xQ - xP);
+	xR = (L)^2 - xP - xQ;
+	yR = L*(xP - xR) - yP;
 	return([xR, yR]);
 }
 addhelp(ellptadd, {"ellptadd(E,P,Q)\n
@@ -82,7 +79,7 @@ Retourne le point P + Q."
 });
 
 ellmultbyN(E, P, N) = {
-	if(N == 1, error("N doit etre > 1"));
+	if(N == 1, return(P));
 	if(P[2] == 0, return(oo));
 	NP = P;
 	n = 2;
