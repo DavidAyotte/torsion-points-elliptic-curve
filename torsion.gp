@@ -46,6 +46,14 @@ f : un polynome represente sous la forme d'un vecteur [a,b,c,d]. Par exemple, po
 Retourne les racines rationnelles d'un polyneme a coefficient entier f"
 });
 
+elldisc(E) = {
+	return(4*(E[1])^3 + 27*(E[2])^2);
+}
+addhelp(elldisc, {"elldsisc(E) \n
+E : une liste [a,b] representant la courbe elliptique y^2 = x^3 + ax + b.
+Retourne le discriminant de E, soit la quantite : 4a^3 + 27b^2."
+});
+
 elldbl(E, P) = {
 	if(P == oo, return(oo));
 	a = E[1]; b = E[2];
@@ -110,7 +118,7 @@ Retourne l'ordre de P. Si P est d'ordre infinie, la fonction retourne +oo.
 "});
 
 elltorsion(E) = {
-	a = E[1]; b = E[2]; D = 4*(a)^3 + 27*(b)^2;
+	D = elldisc(E);
 	Torspts = List([[oo, 1]]);
 	\\Cas y = 0 :
 	f = [1, 0, a, b];
