@@ -7,3 +7,13 @@ calculs.gp
 
 # txt files
 *.txt
+
+#LaTeX
+.aux
+.log
+.pdf
+.synctex
+.gz
+.tex
+.bak
+.sty
