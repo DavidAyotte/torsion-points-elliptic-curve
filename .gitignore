@@ -9,11 +9,11 @@ calculs.gp
 *.txt
 
 #LaTeX
-.aux
-.log
-.pdf
-.synctex
-.gz
-.tex
-.bak
-.sty
+*.aux
+*.log
+*.pdf
+*.synctex
+*.gz
+*.tex
+*.bak
+*.sty
