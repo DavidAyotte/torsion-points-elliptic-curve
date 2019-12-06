@@ -118,6 +118,7 @@ Retourne l'ordre de P. Si P est d'ordre infinie, la fonction retourne +oo.
 "});
 
 elltorsion(E) = {
+	a = E[1]; b = E[2];
 	D = elldisc(E);
 	Torspts = List([[oo, 1]]);
 	\\Cas y = 0 :
